@@ -1,0 +1,1 @@
+web: gunicorn Trail_test.wsgi --log-file -
