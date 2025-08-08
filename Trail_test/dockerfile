@@ -1,0 +1,7 @@
+FROM python:3.11
+ENV PYTHONUNBUFFERED=1
+RUN mkdir /code
+WORKDIR /code
+COPY . /code/
+CMD ["sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:6006"]
+EXPOSE  6006
